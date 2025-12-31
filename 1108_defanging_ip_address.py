@@ -1,5 +1,5 @@
 class Solution:
-    def defangIPaddr(self, address: str) -> str:
+    def defangIPaddrCharConcat(self, address: str) -> str:
         ans = ""
         for ch in address:
             if ch == ".":
@@ -18,3 +18,6 @@ class Solution:
                 ans.append(ch)
 
         return "".join(ans)
+
+    def defangIPaddrReplace(self, address: str) -> str:
+        return address.replace(".", "[.]")
