@@ -4,10 +4,7 @@ class Solution:
         k = k % n
 
         result = []
-        for i in range(n - k, n):
-            result.append(nums[i])
-
-        for i in range(n - k):
-            result.append(nums[i])
+        result.extend(nums[n-k:])
+        result.extend(nums[:n-k])
 
         nums[:] = result
